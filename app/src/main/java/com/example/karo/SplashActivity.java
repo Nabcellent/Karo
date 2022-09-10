@@ -1,10 +1,10 @@
 package com.example.karo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.karo.pages.auth.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,6 +20,7 @@ public class SplashActivity extends AppCompatActivity {
             FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
             if (currentUser == null) {
                 startActivity(new Intent(this, LoginActivity.class));
+//                startActivity(new Intent(this, MainActivity.class));
             } else {
                 startActivity(new Intent(this, MainActivity.class));
             }
