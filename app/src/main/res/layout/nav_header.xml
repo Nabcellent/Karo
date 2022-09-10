@@ -83,7 +83,8 @@
         android:textSize="12sp" />
 
     <View
+        style="@style/line"
         android:layout_width="match_parent"
-        android:layout_below="@id/followers" style="@style/line"/>
+        android:layout_below="@id/followers" />
 
 </RelativeLayout>
