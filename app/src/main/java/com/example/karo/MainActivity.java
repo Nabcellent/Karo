@@ -34,20 +34,20 @@ public class MainActivity extends AppCompatActivity {
 
             switch (item.getItemId()) {
                 case R.id.home:
-                    Helpers.showToast(this, "Home is Clicked");
                     changeFragment(new HomeFragment());
+                    Helpers.showToast(this, "Home is Clicked");
                     break;
                 case R.id.manage_fees:
-                    Helpers.showToast(this, "Manage Fees is Clicked");
                     changeFragment(new ManageFeesFragment());
+                    Helpers.showToast(this, "Manage Fees is Clicked");
                     break;
                 case R.id.settings:
-                    Helpers.showToast(this, "Settings is Clicked");
                     changeFragment(new SettingsFragment());
+                    Helpers.showToast(this, "Settings is Clicked");
                     break;
                 case R.id.profile:
-                    Helpers.showToast(this, "Profile is Clicked");
                     changeFragment(new ProfileFragment());
+                    Helpers.showToast(this, "Profile is Clicked");
                     break;
                 case R.id.share:
                     Helpers.showToast(this, "Share is Clicked");
