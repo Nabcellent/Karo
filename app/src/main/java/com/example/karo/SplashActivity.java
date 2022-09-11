@@ -6,7 +6,6 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.karo.pages.auth.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -19,8 +18,8 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(() -> {
             FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
             if (currentUser == null) {
-                startActivity(new Intent(this, LoginActivity.class));
-//                startActivity(new Intent(this, MainActivity.class));
+//                startActivity(new Intent(this, LoginActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
             } else {
                 startActivity(new Intent(this, MainActivity.class));
             }
