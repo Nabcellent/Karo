@@ -8,7 +8,6 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.example.karo.pages.auth.LoginActivity;
 import com.example.karo.utils.Helpers;
@@ -27,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.navigation_view);
 
         toolbar.setNavigationOnClickListener(view -> drawer.openDrawer(GravityCompat.START));
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().add(R.id.frame_layout, new HomeFragment()).commit();
 
         navigationView.setNavigationItemSelectedListener(item -> {
             item.setChecked(true);
@@ -68,10 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void changeFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        fragmentTransaction.replace(R.id.frame_layout, fragment);
-        fragmentTransaction.commit();
+        fragmentManager.beginTransaction().replace(R.id.frame_layout, fragment).commit();
     }
 
     void logout() {
