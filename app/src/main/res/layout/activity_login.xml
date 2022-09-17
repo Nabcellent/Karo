@@ -12,6 +12,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:src="@drawable/logo" />
 
     <LinearLayout
@@ -51,9 +52,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Sign In"
             android:background="@drawable/button"
+            android:text="Sign In"
             android:textSize="16sp" />
+
         <ProgressBar
             android:id="@+id/progress_bar"
             android:layout_width="24dp"
